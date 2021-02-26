@@ -1,0 +1,3 @@
+[submodule "vimdotfiles"]
+	path = vimdotfiles
+	url = https://github.com/greveritt/vimdotfiles.git
