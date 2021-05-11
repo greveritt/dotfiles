@@ -17,6 +17,7 @@ let g:netrw_browse_split = 4
 
 autocmd FileType ruby setlocal commentstring=#\ %s
 autocmd FileType zsh setlocal commentstring=#\ %s
+autocmd FileType vim setlocal commentstring=\"\ %s
 
 " This uses Spring for RSpec tests if there is a spring shim in the project bin/ of your current
 " working directory. Please note that the working directory is based on where you invoke Vim, not
