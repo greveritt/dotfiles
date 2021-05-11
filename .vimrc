@@ -23,9 +23,9 @@ autocmd FileType zsh setlocal commentstring=#\ %s
 " the directory of the file that is currently open or even any path supplied as a command line
 " argument to Vim.
 if filereadable('bin/spring')
-  let g:rspec_command = "!bundle exec spring rspec {spec}"
+  let g:rspec_command = "!bin/spring rspec {spec}"
 else
-  let g:rspec_command = "!bundle exec rspec {spec}"
+  let g:rspec_command = "!bin/spring rspec {spec}"
 endif
 let g:rspec_runner = "os_x_iterm"
 
