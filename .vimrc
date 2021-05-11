@@ -8,7 +8,6 @@
 if executable('ag')
 	let g:ackprg = 'ag --vimgrep'
 endif
-:nnoremap <Leader>e :Vexplore<Return>
 
 " NetRW options
 let g:netrw_altv = 1
@@ -30,8 +29,40 @@ else
 endif
 let g:rspec_runner = "os_x_iterm"
 
+" Add FZF to &runtimepath so that the plugin fzf.vim will have access to the latest library from
+" Homebrew
+set rtp+=/usr/local/opt/fzf
+
+" Finding files
+nnoremap <F3> :Vexplore<Return>
+noremap <Leader>e :Files<CR>
+
+" Split
+noremap <Leader>h :<C-u>split<CR>
+noremap <Leader>v :<C-u>vsplit<CR>
+
+" Git
+noremap <Leader>gs :Git<CR>
+noremap <Leader>gc :Git commit<CR>
+noremap <Leader>gb :Git blame<CR>
+
 " RSpec.vim mappings
 map <Leader>t :call RunCurrentSpecFile()<CR>
 map <Leader>s :call RunNearestSpec()<CR>
 map <Leader>l :call RunLastSpec()<CR>
 map <Leader>a :call RunAllSpecs()<CR>
+
+" Buffer nav
+noremap <leader>z :bp<CR>
+noremap <leader>q :bp<CR>
+noremap <leader>x :bn<CR>
+noremap <leader>w :bn<CR>
+
+" Close buffer
+noremap <leader>c :bd<CR>
+
+" Switching windows
+noremap <C-j> <C-w>j
+noremap <C-k> <C-w>k
+noremap <C-l> <C-w>l
+noremap <C-h> <C-w>h
