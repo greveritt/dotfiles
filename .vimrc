@@ -25,7 +25,7 @@ autocmd FileType vim setlocal commentstring=\"\ %s
 if filereadable('bin/spring')
   let g:rspec_command = "!bin/spring rspec {spec}"
 else
-  let g:rspec_command = "!bin/spring rspec {spec}"
+  let g:rspec_command = "!bin/rspec {spec}"
 endif
 let g:rspec_runner = "os_x_iterm"
 
