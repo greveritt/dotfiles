@@ -17,6 +17,7 @@ let g:netrw_browse_split = 4
 autocmd FileType ruby setlocal commentstring=#\ %s
 autocmd FileType zsh setlocal commentstring=#\ %s
 autocmd FileType yaml setlocal commentstring=#\ %s
+autocmd FileType haml setlocal commentstring=#\ %s
 autocmd FileType vim setlocal commentstring=\"\ %s
 
 " This uses Spring for RSpec tests if there is a spring shim in the project bin/ of your current
