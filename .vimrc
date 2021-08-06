@@ -29,7 +29,6 @@ if filereadable('bin/spring')
 else
   let g:rspec_command = "!bin/rspec {spec}"
 endif
-let g:rspec_runner = "os_x_iterm"
 
 " Add FZF to &runtimepath so that the plugin fzf.vim will have access to the latest library from
 " Homebrew
