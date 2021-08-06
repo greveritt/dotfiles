@@ -4,6 +4,7 @@
 :set expandtab
 :set tabstop=2
 :set shiftwidth=2
+:set mouse=a
 :let mapleader=","
 if executable('ag')
 	let g:ackprg = 'ag --vimgrep'
