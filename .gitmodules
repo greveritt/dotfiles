@@ -1,5 +1,5 @@
 [submodule ".vim/pack/my-plugins/opt/vim-gitgutter"]
-	path = .vim/pack/my-plugins/opt/vim-gitgutter
+	path = .vim/pack/my-plugins/start/vim-gitgutter
 	url = git@github.com:airblade/vim-gitgutter.git
 [submodule ".vim/pack/my-plugins/opt/vim-rspec"]
 	path = .vim/pack/my-plugins/start/vim-rspec
