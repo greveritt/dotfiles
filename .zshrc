@@ -122,3 +122,5 @@ source /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 # }
 # add-zsh-hook chpwd load-nvmrc
 # load-nvmrc
+
+export DEVCONTAINER_VOLUME_CONSISTENCY="delegated"
