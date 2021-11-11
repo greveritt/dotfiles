@@ -31,7 +31,7 @@ noremap <Leader>e :Files<CR>
 
 " Split
 noremap <Leader>h :<C-u>split<CR>
-noremap <Leader>v :<C-u>vsplit<CR>
+noremap <Leader>v :<C-u>vsplit<CR> <C-w>l
 
 " Git
 noremap <Leader>gs :Git<CR>
