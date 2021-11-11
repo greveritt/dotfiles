@@ -21,16 +21,6 @@ autocmd FileType yaml setlocal commentstring=#\ %s
 autocmd FileType haml setlocal commentstring=#\ %s
 autocmd FileType vim setlocal commentstring=\"\ %s
 
-" This uses Spring for RSpec tests if there is a spring shim in the project bin/ of your current
-" working directory. Please note that the working directory is based on where you invoke Vim, not
-" the directory of the file that is currently open or even any path supplied as a command line
-" argument to Vim.
-if filereadable('bin/spring')
-  let g:rspec_command = "!bin/spring rspec {spec}"
-else
-  let g:rspec_command = "!bin/rspec {spec}"
-endif
-
 " Add FZF to &runtimepath so that the plugin fzf.vim will have access to the latest library from
 " Homebrew
 set rtp+=/usr/local/opt/fzf
@@ -48,11 +38,11 @@ noremap <Leader>gs :Git<CR>
 noremap <Leader>gc :Git commit<CR>
 noremap <Leader>gb :Git blame<CR>
 
-" RSpec.vim mappings
-map <Leader>t :call RunCurrentSpecFile()<CR>
-map <Leader>s :call RunNearestSpec()<CR>
-map <Leader>l :call RunLastSpec()<CR>
-map <Leader>a :call RunAllSpecs()<CR>
+" test.vim mappings
+map <Leader>t :TestFile<CR>
+map <Leader>s :TestNearest<CR>
+map <Leader>l :TestLast<CR>
+map <Leader>a :TestSuite<CR>
 
 " Buffer nav
 noremap <leader>z :bp<CR>
