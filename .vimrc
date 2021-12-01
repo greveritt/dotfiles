@@ -25,6 +25,13 @@ autocmd FileType vim setlocal commentstring=\"\ %s
 " Homebrew
 set rtp+=/usr/local/opt/fzf
 
+" test.vim options
+if has('nvim')
+  let test#strategy = "neovim"
+else
+  let test#strategy = "vimterminal"
+endif
+
 " Finding files
 nnoremap <F3> :Vexplore<Return>
 noremap <Leader>e :Files<CR>
