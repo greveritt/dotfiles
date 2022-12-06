@@ -36,7 +36,7 @@ endif
 let test#ruby#use_spring_binstub = 1
 
 " Split
-noremap <Leader>h :<C-u>split<CR>
+noremap <Leader>h :<C-u>split<CR> <C-w>j
 noremap <Leader>v :<C-u>vsplit<CR> <C-w>l
 
 " Git
