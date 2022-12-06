@@ -43,6 +43,8 @@ noremap <Leader>v :<C-u>vsplit<CR> <C-w>l
 noremap <Leader>gs :Git<CR>
 noremap <Leader>gc :Git commit<CR>
 noremap <Leader>gb :Git blame<CR>
+noremap <Leader>gn :Gitsigns next_hunk<CR>
+noremap <Leader>gp :Gitsigns prev_hunk<CR>
 
 " test.vim mappings
 map <Leader>t :TestFile<CR>
