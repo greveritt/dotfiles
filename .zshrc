@@ -124,3 +124,17 @@ source /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 # load-nvmrc
 
 export DEVCONTAINER_VOLUME_CONSISTENCY="delegated"
+
+# Why is this next part even necessary? Bad shims?
+export DISABLE_SPRING=1
+# export DISABLE_SPRING=0
+
+test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
+
+# source /usr/local/opt/zsh-fast-syntax-highlighting/share/zsh-fast-syntax-highlighting/fast-syntax-highlighting.plugin.zsh
+
+# VI-mode plugin settings
+# VI_MODE_SET_CURSOR=true
+# set -o vi
+
+export LESS="${LESS}MF"
