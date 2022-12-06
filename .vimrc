@@ -23,20 +23,14 @@ autocmd FileType yaml setlocal commentstring=#\ %s
 autocmd FileType haml setlocal commentstring=#\ %s
 autocmd FileType vim setlocal commentstring=\"\ %s
 
-" Add FZF to &runtimepath so that the plugin fzf.vim will have access to the latest library from
-" Homebrew
-set rtp+=/usr/local/opt/fzf
-
 " test.vim options
 if has('nvim')
-  let test#strategy = "neovim"
+  " let test#strategy = "neovim"
+  let test#strategy = "basic"
 else
   let test#strategy = "vimterminal"
 endif
-
-" Finding files
-nnoremap <F3> :Vexplore<Return>
-noremap <Leader>e :Files<CR>
+let test#ruby#use_spring_binstub = 1
 
 " Split
 noremap <Leader>h :<C-u>split<CR>
