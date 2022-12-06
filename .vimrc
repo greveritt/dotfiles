@@ -6,7 +6,9 @@
 :set shiftwidth=2
 :set mouse=a
 :let mapleader=","
-if executable('ag')
+if executable('rg')
+	let g:ackprg = 'rg --vimgrep'
+elseif executable('ag')
 	let g:ackprg = 'ag --vimgrep'
 endif
 
