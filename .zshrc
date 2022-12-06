@@ -63,7 +63,7 @@ COMPLETION_WAITING_DOTS="true"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git macos z rbenv rails bundler nvm aws web-search colored-man-pages rand-quote yarn)
+plugins=(git macos z rbenv rails bundler nvm aws web-search colored-man-pages rand-quote yarn thefuck pg kubectl aliases)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -97,9 +97,6 @@ fi
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
-
-test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
-source /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
 # place this after nvm initialization!
 # autoload -U add-zsh-hook
