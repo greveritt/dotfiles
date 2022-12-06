@@ -51,6 +51,7 @@ map <Leader>t :TestFile<CR>
 map <Leader>s :TestNearest<CR>
 map <Leader>l :TestLast<CR>
 map <Leader>a :TestSuite<CR>
+map <Leader>r :TestVisit<CR>
 
 " Buffer nav
 noremap <leader>z :bp<CR>
