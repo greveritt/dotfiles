@@ -17,7 +17,10 @@ let g:netrw_altv = 1
 let g:netrw_winsize = 25
 let g:netrw_browse_split = 4
 
+nnoremap <F3> :Vexplore<Return>
+
 autocmd FileType ruby setlocal commentstring=#\ %s
+autocmd FileType haml setlocal commentstring=\-#\ %s
 autocmd FileType zsh setlocal commentstring=#\ %s
 autocmd FileType yaml setlocal commentstring=#\ %s
 autocmd FileType haml setlocal commentstring=#\ %s
