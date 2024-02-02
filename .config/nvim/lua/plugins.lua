@@ -94,8 +94,9 @@ return require('packer').startup(function()
    --   'nvim-treesitter/nvim-treesitter',
    --   run = ':TSUpdate'
    -- }
+  use 'github/copilot.vim'
   use {
-    'nvim-telescope/telescope.nvim', tag = '0.1.0',
+    'nvim-telescope/telescope.nvim', tag = '0.1.5',
     requires = { {'nvim-lua/plenary.nvim'} }
   } 
   use {
