@@ -19,6 +19,8 @@ let g:netrw_browse_split = 4
 
 nnoremap <F3> :Vexplore<Return>
 
+" commentary
+filetype plugin indent on
 autocmd FileType ruby setlocal commentstring=#\ %s
 autocmd FileType haml setlocal commentstring=\-#\ %s
 autocmd FileType zsh setlocal commentstring=#\ %s
