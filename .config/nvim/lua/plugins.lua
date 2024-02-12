@@ -1,13 +1,24 @@
-return require('packer').startup(function()
-  use 'wbthomason/packer.nvim'
-  use 'neovim/nvim-lspconfig'
-  use {
+local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
+if not vim.loop.fs_stat(lazypath) then
+  vim.fn.system({
+    "git",
+    "clone",
+    "--filter=blob:none",
+    "https://github.com/folke/lazy.nvim.git",
+    "--branch=stable", -- latest stable release
+    lazypath,
+  })
+end
+vim.opt.rtp:prepend(lazypath)
+return require('lazy').setup({
+  'neovim/nvim-lspconfig',
+  {
       'nvim-treesitter/nvim-treesitter',
-      run = function()
+      build = function()
           local ts_update = require('nvim-treesitter.install').update({ with_sync = true })
           ts_update()
       end,
-      config = function()
+      config = function(plugin)
         require'nvim-treesitter.configs'.setup {
         -- A list of parser names, or "all"
         ensure_installed = { "lua", "ruby", "typescript", "json", "javascript", "yaml", "sql" },
@@ -60,51 +71,51 @@ return require('packer').startup(function()
         },
       }
     end
-  }
-  use 'mileszs/ack.vim'
-  use 'editorconfig/editorconfig-vim'
+  },
+  'mileszs/ack.vim',
+  'editorconfig/editorconfig-vim',
   -- use {
   --   'junegunn/fzf.vim',
-  --   requires = { 'junegunn/fzf', run = function() vim.fn['fzf#install'](0) end }
+  --   dependencies = { 'junegunn/fzf', build = function() vim.fn['fzf#install'](0) end }
   -- }
-  use 'tpope/vim-commentary'
-  use 'tpope/vim-endwise'
-  use 'tpope/vim-fugitive'
-  use {
+  'tpope/vim-commentary',
+  'tpope/vim-endwise',
+  'tpope/vim-fugitive',
+  {
     'lewis6991/gitsigns.nvim',
-    -- tag = 'release',
-    -- requires = 'nvim-lua/plenary.nvim',
+    -- version = 'release',
+    -- dependencies = 'nvim-lua/plenary.nvim',
     config = function()
       require('gitsigns').setup()
     end
-  }
-  use 'alampros/vim-styled-jsx'
-  use 'vim-test/vim-test'
-  use 'jparise/vim-graphql'
+  },
+  'alampros/vim-styled-jsx',
+  'vim-test/vim-test',
+  'jparise/vim-graphql',
   -- use {
   --   'phaazon/hop.nvim',
   --   branch = 'v2', -- optional but strongly recommended
   --   config = function()
   --     -- you can configure Hop the way you like here; see :h hop-config
-  --     require'hop'.setup { keys = 'etovxqpdygfblzhckisuran' }
+  --     require'hop'.init { keys = 'etovxqpdygfblzhckisuran' }
   --   end
   -- }
-  -- use 'easymotion/vim-easymotion'
+  -- use 'easymotion/vim-easymotion',
    -- use {
    --   'nvim-treesitter/nvim-treesitter',
-   --   run = ':TSUpdate'
+   --   build = ':TSUpdate',
    -- }
-  use 'github/copilot.vim'
-  use {
-    'nvim-telescope/telescope.nvim', tag = '0.1.5',
-    requires = { {'nvim-lua/plenary.nvim'} }
-  } 
-  use {
+  'github/copilot.vim',
+  {
+    'nvim-telescope/telescope.nvim', version = '0.1.5',
+    dependencies = { {'nvim-lua/plenary.nvim'} }
+  }, 
+  {
     'sudormrfbin/cheatsheet.nvim',
-    requires = {
+    dependencies = {
       {'nvim-telescope/telescope.nvim'},
       {'nvim-lua/popup.nvim'},
       {'nvim-lua/plenary.nvim'},
     }
-  }
-end)
+  },
+})
