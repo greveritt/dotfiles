@@ -79,7 +79,22 @@ return require('lazy').setup({
   --   dependencies = { 'junegunn/fzf', build = function() vim.fn['fzf#install'](0) end }
   -- }
   'tpope/vim-commentary',
-  'tpope/vim-endwise',
+  {
+    'tpope/vim-endwise',
+    ft = { 'make' }
+  },
+  {
+    'RRethy/nvim-treesitter-endwise',
+    config = function()
+      require('nvim-treesitter.configs').setup {
+          endwise = {
+              enable = true,
+          },
+      }
+    end,
+    dependencies = { 'nvim-treesitter/nvim-treesitter' },
+    ft = { 'vim', 'lua', 'sh', 'bash', 'zsh', 'ruby' }
+  },
   'tpope/vim-fugitive',
   {
     'lewis6991/gitsigns.nvim',
@@ -89,9 +104,15 @@ return require('lazy').setup({
       require('gitsigns').setup()
     end
   },
-  'alampros/vim-styled-jsx',
+  {
+    'alampros/vim-styled-jsx',
+    ft = { 'javascriptreact', 'typescriptreact' }
+  },
   'vim-test/vim-test',
-  'jparise/vim-graphql',
+  {
+    'jparise/vim-graphql',
+    ft = 'graphql'
+  },
   -- use {
   --   'phaazon/hop.nvim',
   --   branch = 'v2', -- optional but strongly recommended
