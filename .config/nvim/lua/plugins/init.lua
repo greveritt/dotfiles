@@ -35,7 +35,7 @@ return {
   			"vim", "lua", "vimdoc",
         "html", "css", "ruby",
         "json", "javascript", "yaml",
-        "sql", "bash"
+        "sql", "bash", "rust"
   		},
   	},
   },
