@@ -25,19 +25,6 @@ noremap <Leader>gb :Git blame<CR>
 noremap <Leader>gn :Gitsigns next_hunk<CR>
 noremap <Leader>gp :Gitsigns prev_hunk<CR>
 
-" test.vim mappings
-map <Leader>t :TestFile<CR>
-map <Leader>s :TestNearest<CR>
-map <Leader>l :TestLast<CR>
-map <Leader>a :TestSuite<CR>
-map <Leader>r :TestVisit<CR>
-
-" Buffer nav
-" noremap <leader>z :bp<CR>
-" noremap <leader>q :bp<CR>
-" noremap <leader>x :bn<CR>
-" noremap <leader>w :bn<CR>
-
 " Close buffer
 noremap <leader>c :bd<CR>
 
