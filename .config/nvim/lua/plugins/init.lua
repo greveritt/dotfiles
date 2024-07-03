@@ -53,5 +53,16 @@ return {
   {
     'vim-test/vim-test',
     cmd = { 'TestFile', 'TestNearest', 'TestLast', 'TestSuite', 'TestVisit' }
+  },
+
+  {
+    "mfussenegger/nvim-dap",
+    dependencies = {
+      "suketa/nvim-dap-ruby"
+    },
+    event = 'User FilePost',
+    config = function()
+      require("dap-ruby").setup()
+    end
   }
 }
