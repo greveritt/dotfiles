@@ -13,3 +13,6 @@ map("n", "<Leader>s", ':TestNearest<CR>')
 map("n", "<Leader>l", ':TestLast<CR>')
 map("n", "<Leader>a", ':TestSuite<CR>')
 map("n", "<Leader>r", ':TestVisit<CR>')
+
+-- Telescope
+map("n", "<Leader>fs", "<cmd>Telescope lsp_workplace_symbols<CR>", { desc = "Telescope lsp workplace symbols" })

@@ -26,8 +26,8 @@ noremap <Leader>gn :Gitsigns next_hunk<CR>
 noremap <Leader>gp :Gitsigns prev_hunk<CR>
 
 " Close buffer
-noremap <leader>c :bd<CR>
+"noremap <leader>c :bd<CR>
 
-nnoremap <leader>fg <cmd>Telescope live_grep<cr>
+"nnoremap <leader>fg <cmd>Telescope live_grep<cr>
 " set foldmethod=expr
 " set foldexpr=nvim_treesitter#foldexpr()
