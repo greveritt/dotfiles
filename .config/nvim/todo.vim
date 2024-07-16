@@ -16,7 +16,7 @@ if has('nvim')
 else
   let test#strategy = "vimterminal"
 endif
-let test#ruby#use_spring_binstub = 1
+"let test#ruby#use_spring_binstub = 1
 
 "nnoremap <leader>fg <cmd>Telescope live_grep<cr>
 " set foldmethod=expr
