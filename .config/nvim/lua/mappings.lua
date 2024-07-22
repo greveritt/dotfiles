@@ -17,7 +17,7 @@ map("n", "<Leader>a", ':TestSuite<CR>')
 map("n", "<Leader>r", ':TestVisit<CR>')
 
 -- Telescope
-map("n", "<Leader>fs", "<cmd>Telescope lsp_workplace_symbols<CR>", { desc = "Telescope lsp workplace symbols" })
+map("n", "<Leader>fs", "<cmd>Telescope lsp_workspace_symbols<CR>", { desc = "Telescope lsp workspace symbols" })
 map("n", "<Leader>ft", "<cmd>Telescope themes<CR>", { desc = "Telescope NvChad themes" })
 
 -- Gitsigns
