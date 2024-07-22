@@ -37,7 +37,13 @@ return {
         "json", "javascript", "yaml",
         "sql", "bash", "rust"
   		},
+      endwise = {
+        enable = true,
+      },
   	},
+    dependencies = {
+      "RRethy/nvim-treesitter-endwise",
+    }
   },
 
   {
