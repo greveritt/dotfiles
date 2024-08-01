@@ -65,6 +65,12 @@ return {
   },
 
   {
+    "folke/which-key.nvim",
+    -- Ensures that we can use WhickKey >3.0 w/ leader after launch
+    event = "VeryLazy"
+  },
+
+  {
     "mfussenegger/nvim-dap",
     dependencies = {
       "suketa/nvim-dap-ruby"
