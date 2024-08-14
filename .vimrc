@@ -35,7 +35,3 @@ noremap <C-k> <C-w>k
 noremap <C-l> <C-w>l
 noremap <C-h> <C-w>h
 
-if has('nvim')
-  " set foldmethod=expr
-  " set foldexpr=nvim_treesitter#foldexpr()
-endif
