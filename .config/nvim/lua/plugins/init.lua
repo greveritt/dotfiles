@@ -37,13 +37,7 @@ return {
         "json", "javascript", "yaml",
         "sql", "bash", "rust"
   		},
-      endwise = {
-        enable = true,
-      },
   	},
-    dependencies = {
-      "RRethy/nvim-treesitter-endwise",
-    }
   },
 
   {
@@ -66,8 +60,27 @@ return {
 
   {
     "folke/which-key.nvim",
+    optional = true,
     -- Ensures that we can use WhickKey >3.0 w/ leader after launch
     event = "VeryLazy"
+  },
+
+  {
+     "windwp/nvim-autopairs",
+    optional = true,
+    config = function(_, opts)
+      -- Copies the config function from NvChad plugin's own config function, expands the rules
+      local npairs = require("nvim-autopairs")
+      npairs.setup(opts)
+
+      -- setup cmp for autopairs
+      local cmp_autopairs = require "nvim-autopairs.completion.cmp"
+      require("cmp").event:on("confirm_done", cmp_autopairs.on_confirm_done())
+
+      npairs.add_rules(require('nvim-autopairs.rules.endwise-elixir'))
+      npairs.add_rules(require('nvim-autopairs.rules.endwise-lua'))
+      npairs.add_rules(require('nvim-autopairs.rules.endwise-ruby'))
+    end
   },
 
   {
