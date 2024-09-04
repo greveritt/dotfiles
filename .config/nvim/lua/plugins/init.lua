@@ -96,6 +96,7 @@ return {
 
   {
     "mfussenegger/nvim-dap",
+    enabled = false,
     dependencies = {
       "suketa/nvim-dap-ruby"
     },
