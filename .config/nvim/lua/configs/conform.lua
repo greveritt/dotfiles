@@ -3,7 +3,10 @@ local options = {
     lua = { "stylua" },
     -- css = { "prettier" },
     -- html = { "prettier" },
-    ruby = { "rubocop" }
+    javascript = { "prettier" },
+    json = { "prettier" },
+    ruby = { "rubocop" },
+    typescript = { "prettier" },
   },
 
   -- format_on_save = {
