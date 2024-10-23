@@ -7,11 +7,27 @@ local M = {}
 
 M.base46 = {
 	theme = "onedark",
+ 	theme_toggle = { "onedark", "one_light" },
 
 	-- hl_override = {
 	-- 	Comment = { italic = true },
 	-- 	["@comment"] = { italic = true },
 	-- },
 }
+
+-- M.ui = {
+--   statusline = {
+--
+--      order = { "mode", "f", "git", "%=", "lsp_msg", "%=", "lsp", "cwd", "xyz", "abc" },
+--      modules = {
+--        abc = function()
+--          return "hi"
+--        end,
+--
+--        xyz =  "hi",
+--        f = "%F"
+--      }
+--   }
+-- }
 
 return M
