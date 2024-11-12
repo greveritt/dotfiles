@@ -62,7 +62,9 @@ return {
   {
     'vim-test/vim-test',
     init = function()
-      vim.g['test#strategy'] = 'basic'
+      vim.g['test#strategy'] = 'neovim'
+      vim.g['test#neovim#term_position'] = 'vert'
+      vim.g['test#neovim_sticky#reopen_window'] = 1
     end,
     cmd = { 'TestFile', 'TestNearest', 'TestLast', 'TestSuite', 'TestVisit' }
   },
