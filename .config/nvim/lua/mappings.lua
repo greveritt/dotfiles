@@ -29,6 +29,9 @@ map("n", "<Leader>gs", "<cmd>Git<CR>", { desc = "Git status" })
 map("n", "<Leader>gc", "<cmd>Git commit<CR>", { desc = "Git commit" })
 map("n", "<Leader>gb", "<cmd>Git blame<CR>", { desc = "Git blame" })
 
+-- Split/joins
+map("n", "gS", ":lua require('treesj').toggle()<CR>", { desc = "Toggle between multi-line and single-liner syntax" })
+
 -- Splits
 unmap("n", "<Leader>v", { desc = "terminal new vertical window" })
 unmap("n", "<Leader>h", { desc = "terminal new horizontal term" })

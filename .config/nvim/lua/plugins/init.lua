@@ -95,6 +95,14 @@ return {
   },
 
   {
+    'Wansmer/treesj',
+    enabled = false,
+    keys = { 'gS' },
+    dependencies = { 'nvim-treesitter/nvim-treesitter' }, -- if you install parsers with `nvim-treesitter`,
+    options = { use_default_keymaps = false }
+  },
+
+  {
     "mfussenegger/nvim-dap",
     enabled = false,
     dependencies = {
