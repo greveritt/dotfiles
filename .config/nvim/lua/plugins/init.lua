@@ -104,5 +104,14 @@ return {
     config = function()
       require("dap-ruby").setup()
     end
+  },
+
+  {
+    'smoka7/hop.nvim',
+    version = "*",
+    event = 'User FilePost',
+    opts = {
+        keys = 'etovxqpdygfblzhckisuran'
+    }
   }
 }
