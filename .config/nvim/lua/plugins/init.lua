@@ -107,11 +107,16 @@ return {
   },
 
   {
-    'smoka7/hop.nvim',
-    version = "*",
-    event = 'User FilePost',
-    opts = {
-        keys = 'etovxqpdygfblzhckisuran'
-    }
+    'easymotion/vim-easymotion',
+    event = 'User FilePost'
   }
+
+  -- {
+  --   'smoka7/hop.nvim',
+  --   version = "*",
+  --   event = 'User FilePost',
+  --   opts = {
+  --       keys = 'etovxqpdygfblzhckisuran'
+  --   }
+  -- }
 }
