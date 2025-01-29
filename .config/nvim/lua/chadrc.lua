@@ -6,8 +6,8 @@
 local M = {}
 
 M.base46 = {
-	theme = "onedark",
- 	theme_toggle = { "onedark", "one_light" },
+	theme = "penumbra_dark",
+ 	theme_toggle = { "blossom_light", "penumbra_dark" },
 
 	-- hl_override = {
 	-- 	Comment = { italic = true },
