@@ -10,11 +10,11 @@ map("i", "jk", "<ESC>")
 
 -- map({ "n", "i", "v" }, "<C-s>", "<cmd> w <cr>")
 unmap("n", "<leader>th", { desc = "telescope nvchad themes" })
-map("n", "<Leader>t", ':TestFile<CR>')
-map("n", "<Leader>s", ':TestNearest<CR>')
-map("n", "<Leader>l", ':TestLast<CR>')
-map("n", "<Leader>a", ':TestSuite<CR>')
-map("n", "<Leader>r", ':TestVisit<CR>')
+map("n", "<Leader>t", ":TestFile<CR>")
+map("n", "<Leader>s", ":TestNearest<CR>")
+map("n", "<Leader>l", ":TestLast<CR>")
+map("n", "<Leader>a", ":TestSuite<CR>")
+map("n", "<Leader>r", ":TestVisit<CR>")
 
 -- Telescope
 map("n", "<Leader>fs", "<cmd>Telescope lsp_workspace_symbols<CR>", { desc = "Telescope lsp workspace symbols" })
@@ -36,17 +36,19 @@ map("n", "<Leader>v", "<cmd>vsplit<CR>", { desc = "splits current window vertica
 map("n", "<Leader>h", "<cmd>split<CR>", { desc = "splits current window horizontally" })
 
 -- hop.nvim
--- local hop = require('hop')
--- local directions = require('hop.hint').HintDirection
--- map('', 'f', function()
---   hop.hint_char1({ direction = directions.AFTER_CURSOR, current_line_only = true })
--- end, {remap=true})
--- map('', 'F', function()
---   hop.hint_char1({ direction = directions.BEFORE_CURSOR, current_line_only = true })
--- end, {remap=true})
--- map('', 't', function()
---   hop.hint_char1({ direction = directions.AFTER_CURSOR, current_line_only = true, hint_offset = -1 })
--- end, {remap=true})
--- map('', 'T', function()
---   hop.hint_char1({ direction = directions.BEFORE_CURSOR, current_line_only = true, hint_offset = 1 })
--- end, {remap=true})
+if package.loaded.hop then
+  local hop = require "hop"
+  local directions = require("hop.hint").HintDirection
+  map("", "f", function()
+    hop.hint_char1 { direction = directions.AFTER_CURSOR, current_line_only = true }
+  end, { remap = true })
+  map("", "F", function()
+    hop.hint_char1 { direction = directions.BEFORE_CURSOR, current_line_only = true }
+  end, { remap = true })
+  map("", "t", function()
+    hop.hint_char1 { direction = directions.AFTER_CURSOR, current_line_only = true, hint_offset = -1 }
+  end, { remap = true })
+  map("", "T", function()
+    hop.hint_char1 { direction = directions.BEFORE_CURSOR, current_line_only = true, hint_offset = 1 }
+  end, { remap = true })
+end
