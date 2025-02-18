@@ -52,3 +52,12 @@ if package.loaded.hop then
     hop.hint_char1 { direction = directions.BEFORE_CURSOR, current_line_only = true, hint_offset = 1 }
   end, { remap = true })
 end
+
+-- conform.nvim
+-- Overrides NvChad's mapped function with our super special async version
+-- map("n", "<leader>fm", function()
+--   require("conform").format { lsp_fallback = true }
+-- end, { desc = "general format file" })
+map("n", "<leader>fm", function()
+  require("conform").format { async = true, lsp_format = "fallback", }
+end, { desc = "general format file" })
