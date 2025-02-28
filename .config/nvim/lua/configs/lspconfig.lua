@@ -3,8 +3,7 @@ require("nvchad.configs.lspconfig").defaults()
 
 local lspconfig = require "lspconfig"
 
--- EXAMPLE
-local servers = { "html", "cssls", "solargraph", "ruby_lsp", "rust_analyzer", "ts_ls", "sqlls" }
+local servers = { "html", "cssls", "ruby_lsp", "rust_analyzer", "ts_ls", "sqlls" }
 local nvlsp = require "nvchad.configs.lspconfig"
 
 -- lsps with default config
